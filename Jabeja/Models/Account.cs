@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Jabeja.Models
 {
-    [Index(nameof(Account.Username),IsUnique = true)]
+
     public class Account
     {
         [Key]
@@ -18,9 +18,7 @@ namespace Jabeja.Models
         [Display(Name = "رمز عبور")]
         [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         public string Password { get; set; }
-        [Display(Name="نام کاربری")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        public string Username { get; set; }
+
         [Display(Name= "شماره تلفن")]
         [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
         public string? PhoneNumber { get; set; }
@@ -35,5 +33,6 @@ namespace Jabeja.Models
         {
             
         }
+
     }
 }
